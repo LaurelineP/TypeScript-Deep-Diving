@@ -14,14 +14,13 @@ It needs to be compiled and once it's done it will output a commonJS file for yo
 
 
 ## TYPES:
-  Typescript basics types are slightly differents from JavaScript's one:
-    -   you can find basics types
-    -   slightly differents types "*"
-    -   really differents types "\**"
-    -   carefull with those "!"
+  Typescript basics types are slightly differents from JavaScript's ones:
+  -   you can find basics types
+  -   slightly differents types: " * "
+  -   really differents types: " \** "
+  -   carefull with those: " ! "
 
-
-  ####Pattern:
+**Patterns**:
   The declarative typescript pattern:
   - declare your usual js variable,
   - followed by a colon,
