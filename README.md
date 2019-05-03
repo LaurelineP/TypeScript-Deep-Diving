@@ -1,4 +1,4 @@
-# TypeScript-Deep-Diving:
+# TypeScript Deep Diving:
 Typescript is like Javascript with superpower. It is still Javascript but definitively  
 stronger, much safer since it is more in control about the expected code behavior and values.  
   
