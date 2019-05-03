@@ -196,7 +196,7 @@ It needs to be compiled and once it's done it will output a commonJS file for yo
   rule of your variable to ```any``` or using union type
 
   Examples of cases: 
-  - Complex Object:
+  - __Complex Object__:
       ```typescript
       let complex: {data: number[], output: (all: boolean) : number[] }  = {
           data: [1,2,3,5],
@@ -206,9 +206,9 @@ It needs to be compiled and once it's done it will output a commonJS file for yo
 
   - __Custom types__: with type Aliases to store a pattern of type:
   You create a type alias by declaring "type and the name followed by an equal as you're creating a new type":
-  ```typescript
-  type Complex = { data: number[], output: (all: boolean) : number[] };
-  ```
+    ```typescript
+    type Complex = { data: number[], output: (all: boolean) : number[] };
+    ```
   Like so you could assign this complex typed Type to a new variable:
   ```typescript
   let complex2: Complex = {
