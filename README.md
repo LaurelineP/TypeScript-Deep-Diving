@@ -14,13 +14,14 @@ It needs to be compiled and once it's done it will output a commonJS file for yo
 
 
 ## TYPES:
-  Typescript basics types are slightly differents from JavaScript's ones:
-  -   you can find basics types
-  -   slightly differents types: " * "
-  -   really differents types: " \** "
-  -   carefull with those: " ! "
+  Typescript basics types are slightly differents from JavaScript's one:
+    -   you can find basics types
+    -   slightly differents types "*"
+    -   really differents types "\**"
+    -   carefull with those "!"
 
-**Patterns**:
+
+  ####Pattern:
   The declarative typescript pattern:
   - declare your usual js variable,
   - followed by a colon,
@@ -227,7 +228,7 @@ First of all we have to know there is an whole behinds-scenes-process happening 
 run ```tsc```.
 Let's refresh : ```tsc``` command here is looking for every typescript files in order to compile them into commonJS files.  
 By doing it that it checks for possible errors made while you write your code.
-If any errors : you'll get a message error, however typescript compiled into commonJS anyway but good news: you can have on say-word on it through the tsconfig.json
+If any errors : you'll get a message error, however typescript compiled into commonJS anyway but good news: you can have a word to say on its behavior, and this, through the tsconfig.json.
 
 [Few Configs]('https://www.typescriptlang.org/docs/handbook/tsconfig-json.html')
 ```noEmitToError```: ( boolean ) --> if true, will build js files if no errors
