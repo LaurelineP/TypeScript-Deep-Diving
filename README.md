@@ -230,10 +230,13 @@ Let's refresh : ```tsc``` command here is looking for every typescript files in 
 By doing it that it checks for possible errors made while you write your code.
 If any errors : you'll get a message error, however typescript compiled into commonJS anyway but good news: you can have a word to say on its behavior, and this, through the tsconfig.json.
 
-[Few Configs]('https://www.typescriptlang.org/docs/handbook/tsconfig-json.html')
-```noEmitToError```: ( boolean ) --> if true, will build js files if no errors
-```noImplicityAny```: ( boolean ) --> if true, ts warns you that by just declaring a variable without anything, it's type is by default set to any
-```sourceMap```: ( boolean ) --> if true and compile your project, it will create a ```.map``` file which allow you to have access to your ts file within your browser and debug with your devTool
-```noUnusedParameters```: ( boolean ) --> if true, ts warns you about parameters not used ( for cleaner code )
+### [Configuration:](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+
+| Properties              | Functions                                                                 |
+|-------------------------|---------------------------------------------------------------------------|
+|```noEmitToError```:     |( boolean ) — if true, will build js files if no errors 
+|```noImplicityAny```:    | ( boolean ) — if true, ts warns you that by just declaring a variable without anything, it's type is by default set to any |
+|```sourceMap```:         |( boolean ) — if true and compile your project, it will create a ```.map``` file which allow you to have access to your ts file within your browser and debug with your devTool.|
+|```noUnusedParameters```:|( boolean ) — if true, ts warns you about parameters not used ( for cleaner code )  |
 
 ... and so much more on the link.
