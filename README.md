@@ -13,7 +13,7 @@ Typescript is a strongly typed language ( as you can imagine due to its name ) a
 It needs to be compiled and once it's done it will output a commonJS file for you.
 
 
-## TYPES:
+## :pushpin: TYPES:
   Typescript basics types are slightly differents from JavaScript's one:
     -   you can find basics types
     -   slightly differents types "*"
@@ -223,7 +223,7 @@ It needs to be compiled and once it's done it will output a commonJS file for yo
   ```
 
 
-## TYPESCRIPT - BEHIND THE SCENES:
+## :wrench: TYPESCRIPT - BEHIND THE SCENES:
 First of all we have to know there is an whole behinds-scenes-process happening when you  
 run ```tsc```.
 Let's refresh : ```tsc``` command here is looking for every typescript files in order to compile them into commonJS files.  
