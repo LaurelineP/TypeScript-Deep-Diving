@@ -234,9 +234,9 @@ If any errors : you'll get a message error, however typescript compiled into com
 
 | Properties              | Functions                                                                 |
 |-------------------------|---------------------------------------------------------------------------|
-|```noEmitToError```:     |( boolean ) — if true, will build js files if no errors 
-|```noImplicityAny```:    | ( boolean ) — if true, ts warns you that by just declaring a variable without anything, it's type is by default set to any |
-|```sourceMap```:         |( boolean ) — if true and compile your project, it will create a ```.map``` file which allow you to have access to your ts file within your browser and debug with your devTool.|
-|```noUnusedParameters```:|( boolean ) — if true, ts warns you about parameters not used ( for cleaner code )  |
+|```noEmitToError```:     | *boolean* — if true, will build js files if no errors 
+|```noImplicityAny```:    | *boolean* — if true, ts warns you that by just declaring a variable without anything, it's type is by default set to any |
+|```sourceMap```:         | *boolean* — if true and compile your project, it will create a ```.map``` file which allow you to have access to your ts file within your browser and debug with your devTool.|
+|```noUnusedParameters```:| *boolean* — if true, ts warns you about parameters not used ( for cleaner code )  |
 
 ... and so much more on the link.
