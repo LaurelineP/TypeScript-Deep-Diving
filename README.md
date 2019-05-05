@@ -240,3 +240,33 @@ If any errors : you'll get a message error, however typescript compiled into com
 |```noUnusedParameters```:| *boolean* — if true, ts warns you about parameters not used ( for cleaner code )  |
 
 ... and so much more on the link.
+
+
+## :pushpin: NAMESPACE & MODULES
+Namespace in typescript are "container" named to wrap anything you want to export as a module avoiding to pollute your code or just for better organize your app by splitting it.
+
+    ```typescript
+    namespace myMath {
+        export const add2 = ( value: number ) => value * 2;
+
+        export const square = ( value: number ) => value * value;
+
+        // NB: from within, your functions are accessible
+    }
+    // NB: from outside your namespace, your functions are not accessible despite pointing the the function with dot notation tight to your namespace
+    ```
+
+At this point we will need interract with this namespace.
+with 2 steps : 
+    - importing to app.js:
+        ```typescript
+        /// <reference path='../exercises/module_classes_exercises/classes_solutions.ts'/>
+        ```
+    - running your cli with ```--outFile```:
+        ```typescript
+        tsc --outFile app.js <namespace-file-name>
+        ```
+
+If no importing the namespace into your main js file,  
+use the cli to with --outFile like above followed by   
+all namespace files you need
