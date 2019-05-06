@@ -281,8 +281,8 @@ Doing without webpack, use ```systemjs.``` so we need to install it:
 and need to adjust our current config ( NOT WORKING WITH CURRENT V)
 - In index.html adjust your script src path and add the following script:
 ```html
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/3.0.0/system.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/3.0.0/extras/named-register.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/3.0.0/system.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/3.0.0/extras/named-register.min.js"></script>
 ...
 <script>
     // setting our baseURL reference path
@@ -294,12 +294,7 @@ and need to adjust our current config ( NOT WORKING WITH CURRENT V)
 | NAMESPACES                                | MODULES                                   |
 |-------------------------------------------|-------------------------------------------|
 | Organize application w/ JS objects        |  Organize app w/ real modules             |
-|-------------------------------------------|-------------------------------------------|
 | Can split up in multiple files            |  Can be split up in multiple files        |
-|-------------------------------------------|-------------------------------------------|
 | No module loader required                 |  Module loader required                   |
-|-------------------------------------------|-------------------------------------------|
-| Dependencies get messy in code & difficult
-to manage                                   |  Dependencies are explicit, easy to manage|
-|-------------------------------------------|-------------------------------------------|
+| Dependencies get messy in code & difficult to manage|Dependencies are explicit, easy to manage|
 | Good & enough for small app               | Good for intermediary and bigger app      |
