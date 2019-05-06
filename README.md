@@ -269,4 +269,23 @@ with 2 steps :
 
 If no importing the namespace into your main js file,  
 use the cli to with --outFile like above followed by   
-all namespace files you need
+all namespace files you need.
+
+## :pushpin: MODULES: IMPORT AND EXPORT
+This is indeed all about ES6 Syntax import and export topics ( seen w/ react and webpack )
+If we do use export and import naively we will get an ```uncaught error: export is not a valid function ``` : client side cause of the module loader we don't have (such as babel in react)
+
+Doing without webpack, use ```systemjs.``` so we need to install it:
+``` npm install systemjs````
+
+and need to adjust our current config ( NOT WORKING WITH CURRENT V)
+- In index.html adjust your script src path and add the following script:
+```html
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/3.0.0/system.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/3.0.0/extras/named-register.min.js"></script>
+...
+<script>
+    // setting our baseURL reference path
+    System.import('app.js');
+</script>
+```
