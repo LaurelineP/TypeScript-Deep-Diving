@@ -289,3 +289,17 @@ and need to adjust our current config ( NOT WORKING WITH CURRENT V)
     System.import('app.js');
 </script>
 ```
+
+### Differences between namespaces and modules:
+| NAMESPACES                                | MODULES                                   |
+|-------------------------------------------|-------------------------------------------|
+| Organize application w/ JS objects        |  Organize app w/ real modules             |
+|-------------------------------------------|-------------------------------------------|
+| Can split up in multiple files            |  Can be split up in multiple files        |
+|-------------------------------------------|-------------------------------------------|
+| No module loader required                 |  Module loader required                   |
+|-------------------------------------------|-------------------------------------------|
+| Dependencies get messy in code & difficult
+to manage                                   |  Dependencies are explicit, easy to manage|
+|-------------------------------------------|-------------------------------------------|
+| Good & enough for small app               | Good for intermediary and bigger app      |
