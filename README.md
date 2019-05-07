@@ -398,5 +398,19 @@ dealing with dynamicals and flexible values while you either write your code or 
         console.log('call', echo2<string> (93));                     // --> IDE complaining
         ```
 
+- Generic **Class**
+    ```typescript
+    class SimpleMath <T> {                               // Specify the generic type
+        baseValue: T;                                    // baseValue should be of the same type
+        multiplyValue: T;                                // multiply should be of the same type
+        calculate(): number {                            // anyhow, calculate should alway return a number
+            return this.baseValue * this.multiplyValue;
+        }
+    }
 
+    const simpleMath = new SimpleMath();
+    simpleMath.baseValue = 5;
+    simpleMath.multiplyValue = 15;
+    console.log(simpleMath.calculate());                // returns 75
+    ```
 

@@ -49,3 +49,16 @@ testArray.push(3);                                  // --> [1.90 , 2, 3]; --> ID
     echo2                       <string>                 ('Something');
     // calling function echo with a parameter with a type of string
 
+// GENERIC CLASS
+    class SimpleMath <T> {
+        baseValue: T;
+        multiplyValue: T;
+        calculate(): number {
+            return this.baseValue * this.multiplyValue;
+        }
+    }
+
+    const simpleMath = new SimpleMath();
+    simpleMath.baseValue = 5;
+    simpleMath.multiplyValue = 15;
+    console.log(simpleMath.calculate());        // returns 75
