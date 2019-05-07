@@ -346,7 +346,7 @@ interface NamedPerson {
   ```
 
 
-- Interface with **inheritance**:
+- Interface with **inheritance**:  
 Inheritance allows you to get the inheritance of a class, but adding id a variation to it like so:  
   ```typescript
   interface AgedPerson extends Person {
