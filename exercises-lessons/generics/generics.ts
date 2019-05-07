@@ -24,3 +24,28 @@ function betterEcho <T> (data: T){
 // console.log('betterEcho string', betterEcho('Lola').length);                        // 4
 // console.log('betterEcho number', betterEcho(23).length);                            // while compiling & typing, error hinting
 // console.log('betterEcho object', betterEcho({name: 'Lola', age: 26}).length);       // while compiling & typing, error hinting
+
+
+// BUILT-IN GENERIC TYPE: Arrays
+const testArray : Array<number> = [1.90 , 2];       // generic type between < and >
+testArray.push(3);                                  // --> [1.90 , 2, 3]; --> IDE not complaining
+// testArray.push('string')                            // --> IDE complaining
+
+
+// GENERIC TYPES AND ARRAYS
+    // Arrays
+    function printAll <T> ( all: T[]) {
+        all.forEach( element => console.log(' element in arr', element ));
+    }
+    printAll(['Apple', 'Lemon', 3]);
+    // element in arr Apples
+    // element in arr Lemon
+    // element in arr 3
+
+    // GENERIC TYPES
+    const echo2:            <T>(data: T) => T           = betterEcho;
+    // usual variable           Type                   Assignation
+
+    echo2                       <string>                 ('Something');
+    // calling function echo with a parameter with a type of string
+

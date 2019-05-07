@@ -375,9 +375,28 @@ dealing with dynamicals and flexible values while you either write your code or 
 "```<T>```" is the sign of a dynamic type.  
 ( NB: corresponding to the position and meaning of ``` ... :TYPE = ...```)
 
-- Generic function
+- Generic **function**
     ```typescript
     function echo <T> ( myObj: any ){
         return data;
     }
     ```
+
+- Built-in generic **arrays**
+    - Arrays
+        ```typescript
+        const testArray : Array<number> = [1.90 , 2];       // type between < and >
+        testArray.push(3);                                  // --> [1.90 , 2, 3]; --> IDE not complaining
+        // testArray.push('string')                         // --> IDE complaining --> array's expecting string arg
+        ```
+    - Generic Types ( not necessary array )
+        ```typescript
+        const echo2                     <T>(data: T) => T               = betteEcho:
+        // regular variable             generic type                    Assignation
+
+        console.log('call', echo2<string> ( 'Something' ));          // --> IDE not complaining
+        console.log('call', echo2<string> (93));                     // --> IDE complaining
+        ```
+
+
+
