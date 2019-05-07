@@ -303,3 +303,34 @@ and need to adjust our current config ( NOT WORKING WITH CURRENT V)
 to manage                                   |  Dependencies are explicit, easy to manage|
 |-------------------------------------------|-------------------------------------------|
 | Good & enough for small app               | Good for intermediary and bigger app      |
+
+
+
+## :pushpin: INTERFACES
+Interfaces are working with contract: meaning interfaces garantee you to have at least one property required within an object
+
+Shaping as type alias:
+```typescript
+interface NamedPerson { 
+    firstName: string;                      // property (required): the property you at least require for sure
+    age?: number;                           // optional property: let consider a possible age property
+    [propName: string] : any;               // optional property unknown: let consider third property
+    greetSelf: (lastName: string): void;    // method (requiered): a method also required
+}
+```
+
+Applying to a class:
+```typescript
+class Person implements NamedPerson {
+    firstName = "Lola";
+    greetSelf = (lastName: string) => {
+        console.log(`Hola, I'm ${this.firstName} ${this.lastName}`)
+    }
+}
+```
+
+Create a new person with this class implementing the interface shaping:
+```typescript
+const myself = new Person();
+myself.greetSelf('Paloma');
+```
