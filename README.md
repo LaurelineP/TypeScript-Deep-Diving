@@ -414,3 +414,18 @@ dealing with dynamicals and flexible values while you either write your code or 
     console.log(simpleMath.calculate());                // returns 75
     ```
 
+- Contrains:
+Constrains is the fact of extending option to check possible values;  
+ex: we know that '12' * 12 could be calculated so within the generic type  
+we add "extends keyword followed by different type you might have:  
+here it is number or string and would be:
+
+```typescript
+ class SimpleMath <T extends number | string> {             // Specify the generic type w/ constrain
+        baseValue: T;
+        multiplyValue: T;
+        calculate(): number {
+            return this.baseValue * this.multiplyValue;
+        }
+    }
+```
