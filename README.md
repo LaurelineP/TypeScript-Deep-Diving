@@ -422,10 +422,26 @@ dealing with dynamicals and flexible values while you either write your code or 
 
     ```typescript
     class SimpleMath <T extends number | string> {             // Specify the generic type w/ constrain
-            baseValue: T;
-            multiplyValue: T;
-            calculate(): number {
-                return this.baseValue * this.multiplyValue;
-            }
+        baseValue: T;
+        multiplyValue: T;
+        calculate(): number {
+            return this.baseValue * this.multiplyValue;
         }
+    }
+    ```
+
+- More constrains:
+    You could control multiple values to differents levels such as:
+    ```typescript
+    class SimpleMath <T extends number , U extends string> {             // Specify the generic type w/ constrain
+        baseValue: T;
+        multiplyValue: U;
+        calculate(): number {
+            return this.baseValue * this.multiplyValue;
+        }
+    }
+
+    const simpleMath = new SimpleMath();
+    simpleMath.baseValue = 5;
+    simpleMath.multiplyValue = "15";
     ```
