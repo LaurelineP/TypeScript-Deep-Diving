@@ -363,3 +363,21 @@ Inheritance allows you to get the inheritance of a class, but adding id a variat
 
   console.log('oldperson:', oldPerson);
   ```
+
+
+
+
+
+## :pushpin: GENERICS
+A new powerfull feature for writing dynamic and flexible code.
+It allows you to get a better feadback/suppor from your IDE and error handling while you're  
+dealing with dynamicals and flexible values while you either write your code or compile.
+"```<T>```" is the sign of a dynamic type.  
+( NB: corresponding to the position and meaning of ``` ... :TYPE = ...```)
+
+- Generic function
+    ```typescript
+    function echo <T> ( myObj: any ){
+        return data;
+    }
+    ```
