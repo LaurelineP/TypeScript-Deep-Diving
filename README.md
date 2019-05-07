@@ -313,7 +313,7 @@ interface NamedPerson {
     greetSelf: (lastName: string): void;    // method (requiered): a method also required
 }
 ```
-
+With Class:
 Applying to a class:
 ```typescript
 class Person implements NamedPerson {
@@ -328,4 +328,38 @@ Create a new person with this class implementing the interface shaping:
 ```typescript
 const myself = new Person();
 myself.greetSelf('Paloma');
+```
+
+
+With function type:
+```typescript
+interface DoubleValueFunc {
+    (number1: number, number2: number) : number;
+}
+
+let myDoubleFunction: DoubleValueFunc;
+myDoubleFunction = (val1: number, val2: number) => {
+    return (val1 + val2) * 2
+}
+
+console.log("myDoubleFunction", myDoubleFunction(10,20));
+```
+
+
+With Inheritance:
+Inheritance allows you to get the inheritance of a class, but adding id a variation to it like so:
+```typescript
+interface AgedPerson extends Person {
+    age: number;                     // before age was not required, in THIS instance it is.
+}
+
+const oldPerson: AgedPerson = {
+    age: 30,
+    firstName: 'Noob',
+    greetSelf: (lastName: string ='I') => {
+        console.log(`Helo, I'm ${firstName} ${lastName}`)
+    }
+}
+
+console.log('oldperson:', oldPerson);
 ```

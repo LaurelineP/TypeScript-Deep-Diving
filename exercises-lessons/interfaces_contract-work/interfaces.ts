@@ -41,4 +41,16 @@ console.log("myDoubleFunction", myDoubleFunction(10,20));
 
 
 /** INTERFACES WITH INHERITANCE */
+interface AgedPerson extends Person {
+    age: number;                     // before age was not required, in THIS instance it is.
+}
 
+const oldPerson: AgedPerson = {
+    age: 30,
+    firstName: 'Noob',
+    greetSelf: (lastName: string ='I') => {
+        console.log(`Helo, I'm ${firstName} ${lastName}`)
+    }
+}
+
+console.log('oldperson:', oldPerson);
