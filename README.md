@@ -347,19 +347,19 @@ interface NamedPerson {
 
 
 - Interface with **inheritance**:
-Inheritance allows you to get the inheritance of a class, but adding id a variation to it like so:
-```typescript
-interface AgedPerson extends Person {
-    age: number;                     // before age was not required, in THIS instance it is.
-}
+Inheritance allows you to get the inheritance of a class, but adding id a variation to it like so:  
+  ```typescript
+  interface AgedPerson extends Person {
+      age: number;                     // before age was not required, in THIS instance it is.
+  }
 
-const oldPerson: AgedPerson = {
-    age: 30,
-    firstName: 'Noob',
-    greetSelf: (lastName: string ='I') => {
-        console.log(`Helo, I'm ${firstName} ${lastName}`)
-    }
-}
+  const oldPerson: AgedPerson = {
+      age: 30,
+      firstName: 'Noob',
+      greetSelf: (lastName: string ='I') => {
+          console.log(`Helo, I'm ${firstName} ${lastName}`)
+      }
+  }
 
-console.log('oldperson:', oldPerson);
-```
+  console.log('oldperson:', oldPerson);
+  ```
