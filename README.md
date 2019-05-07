@@ -302,7 +302,9 @@ and need to adjust our current config ( NOT WORKING WITH CURRENT V)
 
 
 ## :pushpin: INTERFACES
-Interfaces are working with contract: meaning interfaces garantee you to have at least one property required within an object
+Interfaces are working with contract: meaning interfaces garantee you to have at least one property required within an object.
+While you are compiling typescript, your interfaces will be ignored ( to the commonjs translation).  
+It is just here to help while typing your code.
 
 Shaping as type alias:
 ```typescript
