@@ -306,7 +306,7 @@ Interfaces are working with contract: meaning interfaces garantee you to have at
 While you are compiling typescript, your interfaces will be ignored ( to the commonjs translation).  
 It is just here to help while typing your code.
 
-Shaping as type alias:
+Shaping kind of alias type:
 ```typescript
 interface NamedPerson { 
     firstName: string;                      // property (required): the property you at least require for sure
@@ -315,40 +315,38 @@ interface NamedPerson {
     greetSelf: (lastName: string): void;    // method (requiered): a method also required
 }
 ```
-With Class:
-Applying to a class:
-```typescript
-class Person implements NamedPerson {
-    firstName = "Lola";
-    greetSelf = (lastName: string) => {
-        console.log(`Hola, I'm ${this.firstName} ${this.lastName}`)
-    }
-}
-```
-
-Create a new person with this class implementing the interface shaping:
-```typescript
-const myself = new Person();
-myself.greetSelf('Paloma');
-```
+  
+  
+- Interface with **Class**:
+  Create a class Person and implement your Interface NamedPerson ( the shaping-like ) :
+  ```typescript
+  class Person implements NamedPerson {
+      firstName = "Lola";
+      greetSelf = (lastName: string) => {
+          console.log(`Hola, I'm ${this.firstName} ${this.lastName}`)
+      }
+  }
+  const myself = new Person();
+  myself.greetSelf('Paloma');
+  ```
 
 
-With function type:
-```typescript
-interface DoubleValueFunc {
-    (number1: number, number2: number) : number;
-}
+- Interface with **function type**:
+  ```typescript
+  interface DoubleValueFunc {
+      (number1: number, number2: number) : number;
+  }
 
-let myDoubleFunction: DoubleValueFunc;
-myDoubleFunction = (val1: number, val2: number) => {
-    return (val1 + val2) * 2
-}
+  let myDoubleFunction: DoubleValueFunc;
+  myDoubleFunction = (val1: number, val2: number) => {
+      return (val1 + val2) * 2
+  }
 
-console.log("myDoubleFunction", myDoubleFunction(10,20));
-```
+  console.log("myDoubleFunction", myDoubleFunction(10,20));
+  ```
 
 
-With Inheritance:
+- Interface with **inheritance**:
 Inheritance allows you to get the inheritance of a class, but adding id a variation to it like so:
 ```typescript
 interface AgedPerson extends Person {
