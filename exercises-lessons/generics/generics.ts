@@ -50,24 +50,24 @@ testArray.push(3);                                  // --> [1.90 , 2, 3]; --> ID
     // calling function echo with a parameter with a type of string
 
 // GENERIC CLASS
-    class SimpleMath <T> {
-        baseValue: T;
-        multiplyValue: T;
-        calculate(): number {
-            return this.baseValue * this.multiplyValue;
-        }
-    }
+    // class SimpleMath <T> {
+    //     baseValue: T;
+    //     multiplyValue: T;
+    //     calculate(): number {
+    //         return this.baseValue * this.multiplyValue;
+    //     }
+    // }
 
-    const simpleMath = new SimpleMath();
-    simpleMath.baseValue = 5;
-    simpleMath.multiplyValue = 15;
-    console.log(simpleMath.calculate());        // returns 75
+    // const simpleMath = new SimpleMath();
+    // simpleMath.baseValue = 5;
+    // simpleMath.multiplyValue = 15;
+    // console.log(simpleMath.calculate());        // returns 75
 
 // CONSTRAINING
-    class SimpleMath2 <T extends number | string > {        // this syntax is the constrain
-        baseValue: T;
-        multiplyValue: T;
-        calculate(): number {
-            return this.baseValue * this.multiplyValue;
-        }
-    }
+    // class SimpleMath2 <T extends number | string > {        // this syntax is the constrain
+    //     baseValue: T;
+    //     multiplyValue: T;
+    //     calculate(): number {
+    //         return this.baseValue * this.multiplyValue;
+    //     }
+    // }
