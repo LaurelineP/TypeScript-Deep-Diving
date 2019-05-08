@@ -445,3 +445,10 @@ dealing with dynamicals and flexible values while you either write your code or 
     simpleMath.baseValue = 5;
     simpleMath.multiplyValue = "15";
     ```
+
+
+    ## DECORATORS
+    Are functions you can attach to class, functions, method, properties with "@" sign.
+    Decorators sort of extends your class giving extra functionnalities just by adding a specific "@" symbol  
+    calling for the function you just define ( should define before ).
+    . . . Need to deep dive into it.
