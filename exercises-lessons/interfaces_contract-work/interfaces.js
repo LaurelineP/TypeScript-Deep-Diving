@@ -1,3 +1,4 @@
+"use strict";
 // Using Shape in a class
 var Person = /** @class */ (function () {
     function Person() {
@@ -17,3 +18,12 @@ myDoubleFunction = function (val1, val2) {
     return (val1 + val2) * 2;
 };
 console.log("myDoubleFunction", myDoubleFunction(10, 20));
+var oldPerson = {
+    age: 30,
+    firstName: 'Noob',
+    greetSelf: function (lastName) {
+        if (lastName === void 0) { lastName = 'I'; }
+        console.log("Helo, I'm " + firstName + " " + lastName);
+    }
+};
+console.log('oldperson:', oldPerson);

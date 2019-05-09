@@ -447,8 +447,40 @@ dealing with dynamicals and flexible values while you either write your code or 
     ```
 
 
-## DECORATORS
+## :pushpin: DECORATORS
 Are functions you can attach to class, functions, method, properties with "@" sign.
 Decorators sort of extends your class giving extra functionnalities just by adding a specific "@" symbol  
 calling for the function you just define ( should define before ).
 . . . Need to deep dive into it.
+
+
+## :pushpin: TypeScript with a 3rd party library
+Here we are going to work a little bit with JQuery as third part library alongside JQuery.
+
+Using JQuery's CDN in ```index.html``` and using jquery  syntax within ```app.ts``` will leads to error linting and warnings.
+
+- to avoid compiling issues:
+    ```typescript
+    // tsconfig.json
+    ...
+    "noEmitOnErrors": true",
+    ...
+    ```
+
+A common behavior of typescript could be to not recognize your new syntax even though it is there.
+
+- Quick hack : ```declare var ... : any```
+    so when you 're sure it does exist you can use ```declare``` keyword to specify what you need.
+    Here JQuery's ```$``` sign is linting an error so:
+    ```typescript
+    //using typescript
+    declare var $:any;
+    $('button').click( () => alert('Button clicked'));
+    ```
+
+- Better way: [Type definitions](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)
+    Type definition: a typescript feature allowing you to declare 
+    other library and making typescript aware of those syntaxes using a ```d.ts``` file
+    The file will look like this: ```xxx.d.ts```
+    For JQuery:  
+    ```npm install --save-dev @types/jquery```
