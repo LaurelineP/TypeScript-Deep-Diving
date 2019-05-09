@@ -1,15 +1,15 @@
 # TypeScript Deep Diving:
-Typescript is like Javascript with superpower. It is still Javascript but definitively  
+Typescript is like **Javascript with superpower**. It is still Javascript but definitively  
 stronger, much safer since it is more in control about the expected code behavior and values.  
   
 
 As we know, Javascript is poorly typed and uses dynamical typing without really freezing those types  
 ( meaning you could easily reassign any variable to any type of value   
 which also means it could have a risk to return an unexpected value )
-Typescript is a strongly typed language ( as you can imagine due to its name )   and its job is to avoid you to have unexpected outputs or values by giving you a way to take control over the expected value and "shape" of your object and their behaviors.
+Typescript is a **strongly typed language** ( as you can imagine due to its name )   and its job is to avoid you to have unexpected outputs or values by giving you a way to take control over the expected value and "shape" of your object and their behaviors.
 
 **What you get from it ?**
-- your code will be safer ( side effects wise ) and under control
+- A **safer code** ( side effects wise ) and under control
 - your code will be checked as you write ( your code editor will highlight and warn you about your errors )
 It needs to be compiled and once it's done it will output a commonJS file for you.
 
