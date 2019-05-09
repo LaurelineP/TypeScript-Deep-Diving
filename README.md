@@ -484,3 +484,90 @@ A common behavior of typescript could be to not recognize your new syntax even t
     The file will look like this: ```xxx.d.ts```
     For JQuery:  
     ```npm install --save-dev @types/jquery```
+
+## :pushpin: TYPESCRIPT WORKFLOWS
+- TypeScript pure workflow:
+    This pure workflow it is just by using the initial typescript workflow with  
+    tsc command and the ```tsconfig.json``` file.
+
+    - What tsc command does?
+        1. looking to ```tsconfig.json``` file and reads it ( ```tsc --init```).
+        Mainly focused on ```"files"``` or ```exclude``` properties when running ```tsc``` command.  
+        According to the ```tsconfig.json``` specification typescript will got throw all of folders / files suggested.  
+- Typescript Workflow : Gulp
+    1. Install:
+        ```npm install --save-dev gulp gulp-typescript```
+    2. Create your gulp config file & setup:
+        ```touch gulpfile.js```
+        ``` javascript
+        // gulpfile.js
+        var gulp = require('gulp');
+        var ts = require('gulp-typescript');
+
+        // using tsconfig.json file to execute tsc compiler command
+        var tsProject = ts.createProject('tsconfig.json');
+
+        gulp.task('typescript', () => {
+            tsProject.src()
+                .pipe( ts(tsProject) )      // use typescript compiler, take tsProject & compile it
+                .pipe( gulp.dest('') );     // output file in root folder
+        });
+        gulp.task('watch', () => {
+            gulp.watch("*.ts", ['typescript']);     // cf: first task
+        })
+        gulp.task('defaullt', ["watch"]);           // cf: previous task
+        ```
+    3. Check your ```index.html````
+
+    4.  Add ```package.json``` file a command:
+        ```json
+        //...
+        "scripts: {
+            ...
+            "build" : "gulp"
+        }
+        ```
+
+- Typescript Workflow: Webpack ( 4.x )
+    1. Install:
+        ```npm install --save-dev webpack webpack-cli typescript-loader````
+    2. Create your webpack file && setup:
+        ```touch webpack.config.js````
+        ```javascript 
+        //webpack.config.js
+        module.exports = {
+            entry:"./app.ts",
+            output: {
+                filename:"./bundle.js"
+            },
+            devtool:"source-map",
+            resolve: {
+                extensions: ["*",".ts",".tsx",".js"]
+            },
+            module:{
+                rules: [
+                    {test:/\.tsx?$/, loader:"ts-loader"}
+                ]
+            }
+        };
+        ```
+        
+    3. Check your ```index.html````
+        ```html
+        <script src="bundle.js"> </script>
+        ```
+    4.  Add ```package.json``` file a command:
+        ```json
+        //...
+        "scripts": {
+            ...,
+            "build": "webpack -d --watch",
+            "build:prod":"webpack -p"
+        }
+        `````
+    5. Extra:
+        - Careful: may need to install locally "typescript";
+        - in app.ts the import could need to be corrected
+        ```js
+        import $ = require('jquery');
+        ```
