@@ -3,9 +3,10 @@ Typescript is like Javascript with superpower. It is still Javascript but defini
 stronger, much safer since it is more in control about the expected code behavior and values.  
   
 
-As we know, Javascript is poorly typed and uses dynamical typing without really freezing those types 
-( meaning you could easily reassign any variable to any type of value which mean it could have a risk to return an unexpected value )
-Typescript is a strongly typed language ( as you can imagine due to its name ) and its job is to avoid you to have unexpected outputs or values by giving you a way to take control over the expected value and "shape" of your object and their behaviors.
+As we know, Javascript is poorly typed and uses dynamical typing without really freezing those types  
+( meaning you could easily reassign any variable to any type of value   
+which also means it could have a risk to return an unexpected value )
+Typescript is a strongly typed language ( as you can imagine due to its name )   and its job is to avoid you to have unexpected outputs or values by giving you a way to take control over the expected value and "shape" of your object and their behaviors.
 
 **What you get from it ?**
 - your code will be safer ( side effects wise ) and under control
@@ -13,7 +14,7 @@ Typescript is a strongly typed language ( as you can imagine due to its name ) a
 It needs to be compiled and once it's done it will output a commonJS file for you.
 
 
-## :pushpin: TYPES:
+## :pushpin: TYPES
   Typescript basics types are slightly differents from JavaScript's one:
     -   you can find basics types
     -   slightly differents types "*"
@@ -21,7 +22,7 @@ It needs to be compiled and once it's done it will output a commonJS file for yo
     -   carefull with those "!"
 
 
-  ####Pattern:
+  #### Patterns:
   The declarative typescript pattern:
   - declare your usual js variable,
   - followed by a colon,
@@ -223,7 +224,7 @@ It needs to be compiled and once it's done it will output a commonJS file for yo
   ```
 
 
-## :wrench: TYPESCRIPT - BEHIND THE SCENES:
+## :wrench: TYPESCRIPT - BEHIND THE SCENES
 First of all we have to know there is an whole behinds-scenes-process happening when you  
 run ```tsc```.
 Let's refresh : ```tsc``` command here is looking for every typescript files in order to compile them into commonJS files.  
@@ -370,7 +371,7 @@ Inheritance allows you to get the inheritance of a class, but adding id a variat
 
 ## :pushpin: GENERICS
 A new powerfull feature for writing dynamic and flexible code.
-It allows you to get a better feadback/suppor from your IDE and error handling while you're  
+It allows you to get a better feadback/support from your IDE and error handling while you're  
 dealing with dynamicals and flexible values while you either write your code or compile.
 "```<T>```" is the sign of a dynamic type.  
 ( NB: corresponding to the position and meaning of ``` ... :TYPE = ...```)
@@ -448,13 +449,13 @@ dealing with dynamicals and flexible values while you either write your code or 
 
 
 ## :pushpin: DECORATORS
-Are functions you can attach to class, functions, method, properties with "@" sign.
-Decorators sort of extends your class giving extra functionnalities just by adding a specific "@" symbol  
+Are functions you can attach to class, functions, method, properties with ```@``` sign.  
+Decorators sort of extends your class giving extra functionnalities just by adding a specific ```@``` symbol  
 calling for the function you just define ( should define before ).
 . . . Need to deep dive into it.
 
 
-## :pushpin: TypeScript with a 3rd party library
+## :pushpin: TYPESCRIPT & 3RD PART LIBRARY
 Here we are going to work a little bit with JQuery as third part library alongside JQuery.
 
 Using JQuery's CDN in ```index.html``` and using jquery  syntax within ```app.ts``` will leads to error linting and warnings.
@@ -529,9 +530,9 @@ A common behavior of typescript could be to not recognize your new syntax even t
         ```
 
 - Typescript Workflow: Webpack ( 4.x )
-    1. Install:
+    - Install:
         ```npm install --save-dev webpack webpack-cli typescript-loader````
-    2. Create your webpack file && setup:
+    - Create your webpack file && setup:
         ```touch webpack.config.js````
         ```javascript 
         //webpack.config.js
@@ -552,20 +553,19 @@ A common behavior of typescript could be to not recognize your new syntax even t
         };
         ```
         
-    3. Check your ```index.html````
+    - Check your ```index.html````
         ```html
         <script src="bundle.js"> </script>
         ```
-    4.  Add ```package.json``` file a command:
+    -  Add ```package.json``` file a command:
         ```json
         //...
         "scripts": {
-            ...,
             "build": "webpack -d --watch",
             "build:prod":"webpack -p"
         }
         `````
-    5. Extra:
+    - Extra:
         - Careful: may need to install locally "typescript";
         - in app.ts the import could need to be corrected
         ```js
